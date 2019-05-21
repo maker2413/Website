@@ -3,7 +3,28 @@
 }
 
 .left{
+    width:25%;
+    float:left;
+    border: 1px solid red;
+}
+.left2{
     width:50%;
+    float:left;
+    border: 1px solid red;
+}
+.left3{
+    width:75%;
+    float:left;
+    border: 1px solid red;
+}
+.left4{
+    width:100%;
+    float:left;
+    border: 1px solid red;
+}
+
+.lefty{
+    width:75%;
     float:left;
     border: 1px solid red;
 }
