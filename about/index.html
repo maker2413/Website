@@ -6,10 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
 </head>
-<div ng-app="">
-<a style="font-size:35px;border-radius:25px;color:white;background-color:#787878;padding:15px 25px;text-align:center;text-decoration:none;display:inline-block;" title="Home" href="../index.html">Home</a>
 <body style="background: url('https://i.imgur.com/pjITuv6.png') no-repeat fixed center;background-size:cover;">
-    <h1 style="color:white;text-align:center;">About</h1>
+<div ng-app="">
+
+
+
+    <h1 style="color:white;text-align:center;">About This Website</h1>
+    <div style="text-align:center;" ng-include="'../widgets/headerbar.html'"></div>
     <p>This website is hosted on the cloud environment I have given the pet name of SquidsAWS. This cloud environment was started by me so that I could better understand AWS development and work towards getting certified in AWS development. I didn’t just setup a cloud environment though I have also been codifying it as I go with cloudformation templates and ansible playbooks. All the code is in my github but I will explain bits of it.
     </p>
     <p>The SquidsAWS repo found here: <a href="https://github.com/maker2413/SquidsAWS">Github</a> is my repo that contains submodules of my other repos for this project. Inside the CloudFormationTemplates repo found here:<br><a href="https://github.com/maker2413/CloudFormationTemplates">Github</a> I have all my cloud formation templates to build many different things in my environment. These would be run in the following order:<br>

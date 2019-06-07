@@ -2,30 +2,15 @@
     box-sizing:border-box;
 }
 
-.left{
-    width:25%;
-    float:left;
-    border: 1px solid red;
-}
-.left2{
-    width:50%;
-    float:left;
-    border: 1px solid red;
-}
-.left3{
-    width:75%;
-    float:left;
-    border: 1px solid red;
-}
-.left4{
-    width:100%;
-    float:left;
+.pic{
+    width: 25%;
+    float: left;
     border: 1px solid red;
 }
 
-.lefty{
-    width:75%;
-    float:left;
+.desc{
+    width: 75%;
+    float: left;
     border: 1px solid red;
 }
 
@@ -35,18 +20,35 @@
     display: table;
 }
 
+a, a:link, a:visited {
+    
+}
+
+a:hover, a:active {
+}
+
 h1 {
     color:white;
-    font-family: "Times New Roman";
+    font-family:"Times New Roman";
     font-size:60px;
     text-align:center;
     margin-bottom:0px;
+    margin-top:0px;
+}
+
+h2{
+    color:white;
+    font-family:"Times New Roman";
+    font-size:40px;
+    text-align:left;
+    margin-bottom:0px;  
+    margin-top:0px;
 }
 
 p {
     color:white;
     font-family:georgia;
-    font-size:25px;
+    font-size:12px;
 }
 
 body {
@@ -54,3 +56,4 @@ body {
     background-size:cover;
 
 }
+
