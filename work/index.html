@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
 </head>
-    
+
+</style>
 <body>
 <div ng-app="">
 
@@ -20,9 +21,12 @@
     <p style="margin-bottom:0px;margin-top:0px;text-align:center;">DevOps Developer<br>Earth Resources Observation and Science Center<br>Sioux Falls, SD<br>May 2018 - June 2019</p>
     </div>
     <div class="desc">
-    <p> this is ablashblashabsl </p>
+    <p> this is ablashblashabsltest123 </p>
     </div>
     </div>
+    
+
+    <!--Below is unnecessary if we successfully implement dynamically with angular-->
     <hr>
     <p>Software Engineer</p>
     <hr>
@@ -34,7 +38,14 @@
     <hr>
     <p>Project Euler</p>
     <hr>
-    
+<script>
+var app = angular.model('myApp', []);
+app.controller('myCtrl',function($scope){
+    $scope.workName1 = "EROS";
+    $scope.workStart1 = "May 2018";
+    $scope.workEnd1 = "June 2019";
+});
+</script>
 
 </div>
 </body>
