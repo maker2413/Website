@@ -1,5 +1,6 @@
-a:link, a:visited{
-    font-size:35px;
+.myheader:link, .myheader:visited{
+    font-size:25px;
+    font-family:'Montserrat';
     border-radius:25px;
     color:white;
     background-color:#787878;
@@ -9,6 +10,9 @@ a:link, a:visited{
     display:inline-block;
 }
 
-a:hover, a:active{
+.myheader:hover{
     background-color:#b4b4b4;
+    transition: 1.0s;
 }
+
+

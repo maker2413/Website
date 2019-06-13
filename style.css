@@ -22,24 +22,10 @@
 
 h1{
     color:white;
-    font-family:"Times New Roman";
+    font-family:montserrat;
     font-size:60px;
     text-align:center;
     margin-bottom:0px;
     margin-top:0px;
 }
 
-a:link, a:visited {
-    font-size:35px;
-    border-radius:25px;
-    color:blue;
-    background-color:#787878;
-    padding:15px 25px;  
-    text-align:center;
-    text-decoration:none;
-    display:inline-block;       
-}
-
-a:hover, a:active {
-   background-color:#b4b4b4; 
-}
