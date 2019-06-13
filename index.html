@@ -2,40 +2,36 @@
 <html lang="en-US">
 <head>
     <title>Ethan Post's Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
 </head>
 
 <!-- this is a comment -->
+<div ng-app="">
+
 <body style="background: url('https://i.imgur.com/pjITuv6.png') no-repeat fixed center;background-size:cover;">
-    <h1 style="color:white;font-family:georgia;font-size:60px;text-align:center;margin-bottom:0px;">Ethan Post</h1>
-    <p style="color:white;font-family:georgia;font-size:30px;text-align:center;margin-top:0px;">DevOps Engineer</p>
+    <h1 style="background-color:rgba(180,180,180,0.2);">Ethan Post</h1>    
+<div style="text-align:center;" ng-include="'../widgets/headerbar.html'"></div>
+    <p style="color:white;font-family:montserrat;font-size:30px;text-align:center;margin-top:0px;">DevOps Engineer</p>
     <div class="row">
         <div class="bio">
-            <p style="padding-bottom:130px;padding-left:60px;padding-right:60px;color:white;font-family:georgia;font-size:15px;line-height:1.5">
+            <p style="padding-bottom:130px;padding-left:60px;padding-right:60px;color:white;font-family:'montserrat';font-size:15px;line-height:1.5">
                 Ethan Post is a dedicated worker looking to challenge himself in the future. 
                 His hobbies include Cloud Development, biking, cooking, keto, traveling, blah blah and more.
                 He's a very capable individual and I'm really just looking for filler text right now. This one time Ethan and I went to a Ghost concert.
                 That was pretty cool. Except all the drunk people. Actually, they also made it better. Weird stuff. Steak 'N' Shake is overrated. Golden 
-                Corral too. He's pretty good at Rocket League, but unfortunately his friends keep him down. Also, he dabbles a tad in the guitar.
-                My man is the new mysteryguitarman of 2019. What ever happened to that guy? That man? Yo, you ever hear about BUBBER DUCKY? RAHHHH.
+                Corral too. He's pretty good at Rocket League, but unfortunately his friends keep him down. Also, he dabbles a tad in the guitar.<b>Work in progress...</b>
             </p>
 
         </div>
-        <div class="pic">
-            <img title="Just an absolute lad" src="Me.png" alt="Picture of Ethan leaning against a graffiti'd vending machine" style="display:block;margin-left:auto;margin-right:auto;width:50%;height:auto;">
-            <p style="color:white;text-align:center;"><b>Contact Info:</b><br>Phone Number: (712) 461-2593<br>Email: ethancpost@gmail.com</p>
+        <div style="text-align:center;" class="pic">
+            <img title="Just an absolute lad" src="ethan.png" alt="Picture of Ethan leaning against a graffiti'd vending machine" style="display:block;margin-left:auto;margin-right:auto;width:50%;height:auto;">
+            <p style="font-family:montserrat;color:white;"><b>Contact Info:</b><br>Phone Number: (712) 461-2593<br>Email: <a href="mailto: ethancpost@gmail.com" target="_top">ethancpost@gmail.com</a></p>
         </div>
     </div>
-    <p style="text-align:center;">
-        <a style="font-size:35px;" title="Ethan's Resume" href="./resume/index.html">Resume</a>
-        <a style="font-size:35px;" title="Ethan's Work" href="./work/index.html">Work</a>
-        <a style="font-size:35px;" title="Ethan's Projects" href="./work/index.html">Projects</a>
-        <a style="font-size:35px;" title="Ethan's GitHub Profile" href="https://github.com/maker2413" target="_blank">GitHub</a>
-        <a style="font-size:35px;" title="Ethan's Website Explanation" href="./about/index.html">About</a>
-    </p>
     <hr style="clear:right;">
-    <p style="color:white;text-align:center;"><q>I am the <i>Squid Whisperer</i>, and these squids are like <b><i>woah</i></b>.</q> <i>- Ethan Post (2013)</i></p>
+    <p style="font-family:'Montserrat';color:white;text-align:center;"><q>I am the <i>Squid Whisperer</i>, and these squids are like <b><i>woah</i></b>.</q> <i>- Ethan Post (2013)</i></p>
 </body>
-<footer>hi</footer>
+</div>
 </html>
