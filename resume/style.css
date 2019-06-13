@@ -1,0 +1,49 @@
+*{
+    box-sizing:border-box;
+}
+
+a, a:link, a:visited {
+}
+
+a:hover, a:active {
+}
+
+.left{
+    width:50%;
+    float:left;
+    border: 1px solid red;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h1 {
+    color:white;
+    font-family: "Times New Roman";
+    font-size:60px;
+    text-align:center;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+p {
+    color:white;
+    font-family:'Montserrat';
+    font-size:25px;
+}
+
+body {
+    background:url('https://i.imgur.com/pjITuv6.png') no-repeat fixed center;
+    background-size:cover;
+
+}
+
+ul {
+    color:white;
+    font-family:georgia;
+    font-size:25px;
+}
+

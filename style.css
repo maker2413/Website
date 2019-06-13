@@ -1,0 +1,31 @@
+*{
+    box-sizing:border-box;
+}
+
+.bio{
+    width: 50%;
+    float: left;
+    border: 1px solid transparent;
+}
+
+.pic{
+    width: 50%;
+    float: left;
+    border: 1px solid transparent;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h1{
+    color:white;
+    font-family:montserrat;
+    font-size:60px;
+    text-align:center;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
