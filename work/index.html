@@ -9,7 +9,7 @@
 
 </style>
 <body>
-<div ng-app="">
+<div ng-app="myApp" ng-controller="myCtrl">
 
     <h1 style="font-family:'Montserrat';background-color:rgba(180,180,180,0.2);">Ethan Post's Work/Projects</h1>
     <div style="text-align:center;" ng-include="'../widgets/headerbar.html'"></div>
@@ -75,15 +75,20 @@
             <p> Ethan finished up through question 11 of Project Euler. </p>
         </div>
     </div>
+<ul>
+    <li ng-repeat="x in myData">
+        {{ x.Occupation + ', ' + x.Location + ', ' + x.Company + ', ' + x.StartDate + ', ' + x.EndDate }}
+    </li>
+</ul>
 
-<p> All of the above is a work in progress!</p>
 
 <script>
-var app = angular.model('myApp', []);
-app.controller('myCtrl',function($scope){
-    $scope.workName1 = "EROS";
-    $scope.workStart1 = "May 2018";
-    $scope.workEnd1 = "June 2019";
+var app = angular.module('myApp', []);
+app.controller('myCtrl',function($scope, $http){
+    $http.get("jobs.php").then(function (response){
+       $scope.myData = response.data.work;});
+    $http.get("proj.php").then(function (response){
+        $scope.myData2 = response.data.projects;});
 });
 </script>
 
