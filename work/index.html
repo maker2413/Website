@@ -14,83 +14,36 @@
     <h1 style="font-family:'Montserrat';background-color:rgba(180,180,180,0.2);">Ethan Post's Work/Projects</h1>
     <div style="text-align:center;" ng-include="'../widgets/headerbar.html'"></div>
     <h2 style="margin-bottom:5px;border-radius:15px;padding:10px 25px;background-color:rgba(180,180,180,0.4);">Work</h2>
+
+<div ng-repeat="x in myData">
     <div class="row">
         <div class="pic">
-            <div style="text-align:center;"><img src="Me.png" alt="project" style="border: 1px solid white;width:150px;height:150px;"></div> 
-            <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>DevOps Developer{{workName1}}</b><br>Earth Resources Observation and Science Center<br>Sioux Falls, SD<br>May 2018 - June 2019</p>
+                <div style="text-align:center;"><img src="Me.png" alt="project" style="border: 1px solid white;width:150px;height:150px;"></div>
+                <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>{{x.Occupation}}</b><br>{{x.Company}}<br>{{x.Location}}<br>{{x.StartDate + ' - ' + x.EndDate}}</p>
         </div>
         <div class="desc">
-            <p> Ethan managed the Jenkin's Server in the EROS cloud environment and codified it. Gained experience in using the agile development cycle as well as daily scrum meetings. Has built many ansible playbooks to build and configure AWS instances and AMIs. </p>
+            <p>{{x.Description}}</p>
         </div>
-    </div>
+        </div>
     <div style="margin-top:5px;margin-bottom:5px;height:5px;background-color:rgba(180,180,180,0.2);"></div>
-    
-
-    <!--Below is unnecessary if we successfully implement dynamically with angular-->
-    <div class="row">
-        <div class="pic">
-            <div style="text-align:center;"><img src="Me.png" alt="project2" style="border: 1px solid white;width:150px;height:150px;"></div>
-            <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>Software Engineer</b><br>Earth Resources Observation and Science Center<br>Sioux Falls, SD<br>May 2017 - May 2018</p>
-        </div>
-        <div class="desc">
-            <p> Ethan's promotion at EROS honed his skills beyond just technology. He obtained experience taking part in meetings and talking to the government customers. He was the solo developer for the scheduling system currently in use at EROS. Also updated the Data Collection and Routing System at EROS from QT 4 to QT 5. Additionally, he was a developer on the Image Processing System at EROS. </p>
-        </div>
-    </div>
-    <div style="margin-top:5px;margin-bottom:5px;height:5px;background-color:rgba(180,180,180,0.2);"></div>
-
-
-    <div class="row">
-        <div class="pic">
-            <div style="text-align:center;"><img src="Me.png" alt="project3" style="border: 1px solid white;width:150px;height:150px;"></div>
-            <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>Software Engineer Intern</b><br>Earth Resources Observation and Science Center<br>Sioux Falls, SD<br>December 2016 - May 2017</p>
-        </div>
-        <div class="desc">
-            <p> Ethan's introduction at EROS helped develop experience in the waterfall development life cycle. He acquired knowledge in writing and reviewing documentation in Confluence. Additionally, did bug fixes and code reviews of the Data Collection and routing systems at EROS. Learned how to write and work on tickets in JIRA. Learned how to use Git and SVN.</p>
-        </div>
-    </div>    
-    <div style="margin-top:5px;margin-bottom:5px;height:5px;background-color:rgba(180,180,180,0.2);"></div>    
-
-
-    <div class="row">
-        <div class="pic">
-            <div style="text-align:center;"><img src="Me.png" alt="project4" style="border: 1px solid white;width:150px;height:150px;"></div>
-            <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>IT Intern</b><br>Northwest Iowa Community College<br>Sheldon, IA<br>Month Year - Month Year</p>
-        </div>
-        <div class="desc">
-            <p> Ethan's work involved simple virus removal and Windows imaging. He setup network cables and organized the server room. Additionally, he pushed software updates to students' laptops. His work here was introductory to the field. </p>
-        </div>
-    </div>
-
+</div>
 
     <h2 id="B1" style="margin-top:5px;margin-bottom:5px;border-radius:15px;padding:10px 25px;background-color:rgba(180,180,180,0.4);">Projects</h2> 
     
-    
-    
+<div ng-repeat="x in myData2">
     <div class="row">
         <div class="pic">
-            <div style="text-align:center;"><img src="Me.png" alt="project5" style="border: 1px solid white;width:150px;height:150px;"></div>
-            <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>Project Euler</b><br>Month Year - Month Year</p>
+            <div style="text-align:center;"><img src="Me.png" alt="project" style="border: 1px solid white;width:150px;height:150px;"></div>
+            <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>{{x.Title}}</b><br>{{x.StartDate + ' - ' + x.EndDate}}</p>
         </div>
         <div class="desc">
-            <p> Ethan finished up through question 11 of Project Euler. </p>
+            <p>{{x.Description}}</p>
         </div>
-    </div>
-<ul>
-    <li ng-repeat="x in myData">
-        {{ x.Occupation + ', ' + x.Location + ', ' + x.Company + ', ' + x.StartDate + ', ' + x.EndDate }}
-    </li>
-</ul>
+        </div>
+    <div style="margin-top:5px;margin-bottom:5px;height:5px;background-color:rgba(180,180,180,0.2);"></div>
+</div>   
 
-
-<script>
-var app = angular.module('myApp', []);
-app.controller('myCtrl',function($scope, $http){
-    $http.get("jobs.php").then(function (response){
-       $scope.myData = response.data.work;});
-    $http.get("proj.php").then(function (response){
-        $scope.myData2 = response.data.projects;});
-});
-</script>
+<script src="pageController.js"></script>
 
 </div>
 </body>
