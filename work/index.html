@@ -11,36 +11,36 @@
 <body>
 <div ng-app="myApp" ng-controller="myCtrl">
 
-    <h1 style="font-family:'Montserrat';background-color:rgba(180,180,180,0.2);">Ethan Post's Work/Projects</h1>
+    <h1>Ethan Post's Work/Projects</h1>
     <div style="text-align:center;" ng-include="'/widgets/headerbar.html'"></div>
-    <h2 style="margin-bottom:5px;border-radius:15px;padding:10px 25px;background-color:rgba(180,180,180,0.4);">Work</h2>
+    <h2>Work</h2>
 
 <div ng-repeat="x in myData">
     <div class="row">
         <div class="pic">
-                <div style="text-align:center;"><img src="Me.png" alt="project" style="border: 1px solid white;width:150px;height:150px;"></div>
-                <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>{{x.Occupation}}</b><br>{{x.Company}}<br>{{x.Location}}<br>{{x.StartDate + ' - ' + x.EndDate}}</p>
+                <div style="text-align:center;"><img src="Me.png" alt="project"></div>
+                <p style="margin-left:auto;margin-right:auto;width:75%;margin-bottom:0px;margin-top:0px;text-align:center;border-radius:15px;background-color:rgba(180,180,180,0.4);"><b>{{x.Occupation}}</b><br></p><p style="margin-bottom:0px;margin-top:0px;text-align:center;">{{x.Company}}<br>{{x.Location}}<br>{{x.StartDate + ' - ' + x.EndDate}}</p>
         </div>
         <div class="desc">
             <p>{{x.Description}}</p>
         </div>
         </div>
-    <div style="margin-top:5px;margin-bottom:5px;height:5px;background-color:rgba(180,180,180,0.2);"></div>
+    <div class="sepbar"></div>
 </div>
 
-    <h2 id="B1" style="margin-top:5px;margin-bottom:5px;border-radius:15px;padding:10px 25px;background-color:rgba(180,180,180,0.4);">Projects</h2> 
+    <h2 id="B1">Projects</h2> 
     
 <div ng-repeat="x in myData2">
     <div class="row">
         <div class="pic">
-            <div style="text-align:center;"><img src="Me.png" alt="project" style="border: 1px solid white;width:150px;height:150px;"></div>
+            <div style="text-align:center;"><img src="Me.png" alt="project"></div>
             <p style="margin-bottom:0px;margin-top:0px;text-align:center;"><b>{{x.Title}}</b><br>{{x.StartDate + ' - ' + x.EndDate}}</p>
         </div>
         <div class="desc">
             <p>{{x.Description}}</p>
         </div>
         </div>
-    <div style="margin-top:5px;margin-bottom:5px;height:5px;background-color:rgba(180,180,180,0.2);"></div>
+    <div class="sepbar"></div>
 </div>   
 
 <script src="pageController.js"></script>

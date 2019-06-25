@@ -28,6 +28,29 @@
     color:rgb(100,245,255);
 }
 
+.centtext{
+    text-align:center;
+}
+
+p.subtitle{
+    font-size:30px;
+    margin-top:0px;
+}
+
+p.synopsis{
+    padding-bottom:130px;
+    margin-left:5%;
+    margin-right:5%;
+    line-height:1.5;
+}
+
+p{
+    color:white;
+    font-family:'Montserrat';
+    font-size:16px;
+    
+}
+
 body{
     background: url('https://i.imgur.com/pjITuv6.png') no-repeat fixed center;
     background-size:cover;
@@ -35,6 +58,7 @@ body{
 
 h1{
     color:white;
+    background-color:rgba(180,180,180,0.2);
     font-family:montserrat;
     font-size:60px;
     text-align:center;
@@ -42,3 +66,20 @@ h1{
     margin-top:0px;
 }
 
+img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    height:auto;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 1050px){
+
+    p.synopsis{
+        font-size:20px;
+    }    
+
+}
