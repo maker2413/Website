@@ -1,0 +1,68 @@
+*{
+    box-sizing:border-box;
+}
+
+.pic{
+    width: 25%;
+    float: left;
+    border: 1px solid transparent;
+}
+
+.desc{
+    width: 75%;
+    float: left;
+    border: 1px solid transparent;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.sepbar{
+    margin-top:5px;
+    margin-bottom:5px;
+    height:5px;
+    background-color:rgba(180,180,180,0.2);
+}
+
+h1 {
+    color:white;
+    font-family:'Montserrat';
+    background-color:rgba(180,180,180,0.2);
+    font-size:60px;
+    text-align:center;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+h2{
+    color:white;
+    font-family:'Montserrat';
+    font-size:40px;
+    text-align:left;
+    margin-bottom:5px;  
+    margin-top:5px;
+    border-radius:15px;
+    padding:10px 25px;
+    background-color:rgba(180,180,180,0.4);
+}
+
+p {
+    color:white;
+    font-family:'Montserrat';
+    font-size:16px;
+}
+
+body {
+    background:url('https://i.imgur.com/pjITuv6.png') no-repeat fixed center;
+    background-size:cover;
+
+}
+
+img {
+    border: 1px solid white;
+    width:50%;
+    height:50%;
+}

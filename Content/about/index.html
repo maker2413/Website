@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    <title>Ethan Post About</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div ng-app="">
+
+
+
+    <h1>About This Website</h1>
+    <div style="text-align:center;" ng-include="'/widgets/headerbar.html'"></div>
+    <p>This website is hosted on the cloud environment I have given the pet name of SquidsAWS. This cloud environment was started by me so that I could better understand AWS development and work towards getting certified in AWS development. I didn’t just setup a cloud environment though I have also been codifying it as I go with cloudformation templates and ansible playbooks. All the code is in my github but I will explain bits of it.
+    </p>
+    <p>The SquidsAWS repo found here: <a href="https://github.com/maker2413/SquidsAWS">Github</a> is my repo that contains submodules of my other repos for this project. Inside the CloudFormationTemplates repo found here:<br><a href="https://github.com/maker2413/CloudFormationTemplates">Github</a> I have all my cloud formation templates to build many different things in my environment. These would be run in the following order:<br>
+    </p>
+
+    <ul>
+        <li>First you would run the IAM cft to setup the IAM policies and roles used by the other cfts: <a href="https://github.com/maker2413/CloudFormationTemplates/tree/master/SquidsIAM">Github</a></li>
+
+    </ul>
+    
+    <p>Work in progress...</p>
+</body>
+</div>
+</html>

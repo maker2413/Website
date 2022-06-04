@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<head>
+    <title>Ethan Post's Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+</head>
+
+<div ng-app="">
+
+    <h1>Ethan Post's Resume</h1>
+
+    <div style="text-align:center;" ng-include="'/widgets/headerbar.html'"></div>
+
+    <body>
+        <p>Wow let's just get to the jist you want my resume I want you to have my resume I have two different download options for I have this simple download button:</p>
+        <a class="dlbuttonreg" title="Download" href="about:blank">Download resume.pdf (11.2kb)</a>
+        <p>The above button is just a totally normal download button. It will give you the resume you so desire. <b>BUT</b>, I also have this complete overkill download button:</p>
+    
+        <!-- DEV NOTE MAKE THIS BUTTON SUPER FANCY -->
+        <a class="dlbuttonreg" title="Advanced Download" href="about:blank">Super Download resume.pdf (11.2kb)</a>
+        <p>Now this button is legendary! So basically because I was bored I setup and made a playbook to setup a jenkins instance. I then went on to never really use Jenkins all that much so I thought I would make the most overkill resume downloader ever. When you push the uber download button it starts a pipeline on my jenkins server. This pipeline spins up an ec2 instance as a node and checks out my Website repo on this node. It setups a temporary webserver and hosts basically a clone of this website you are currently on and then it downloads the resume to your device like usually. <i>Bing</i> <b>Bang</b> <b><i>Boom</b></i> you got a copy of my resume and it only cost you your time but that was a pretty cool setup huh.</p>
+    </body>
+</div>
+
+</html>

@@ -1,0 +1,32 @@
+.myheader:link, .myheader:visited{
+    font-size:25px;
+    font-family:'Montserrat';
+    border-radius:25px;
+    color:white;
+    background-color:#787878;
+    padding:15px 25px;
+    text-align:center;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.myheader:hover{
+    background-color:#b4b4b4;
+    transition: 1.0s;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 870px){
+    .myheader:link, .myheader:visited{
+        font-size:20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .myheader:link, .myheader:visited{
+        font-size:16px;
+    }
+
+}
+
