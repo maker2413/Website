@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
+  <head>
     <title>Ethan Post's Website</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel='shortcut icon' type='image/png' href='Images/me_pixelart.svg'/>
+    <link rel='shortcut icon' type='image/png' href='images/me_pixelart.svg'/>
     <meta charset="UTF-8">
-</head>
+  </head>
 
-<!-- this is a comment -->
-<div ng-app="">
-
-<body>
-    <h1>Ethan Post</h1>    
-<div class="centtext" ng-include="'/widgets/headerbar.html'"></div>
-    <p class="centtext subtitle">DevOps Engineer</p>
+  <body>
+    <h1>Ethan Post</h1>
+    <ul class="navigation">
+      <li><a href="https://blog.ethancpost.com">Blog</li>
+      <li><a href="https://notes.ethancpost.com">Notes</li>
+      <li><a href="Resume.pdf">Resume</li>
+    </ul>
     <div class="row">
-        <div class="bio">
-            <p class="centtext synopsis">
-                Ethan Post is a dedicated worker looking to challenge himself in the future. 
-                His hobbies include Cloud Development, biking, cooking, keto, traveling, blah blah and more.
-                He's a very capable individual and I'm really just looking for filler text right now. This one time Ethan and I went to a Ghost concert.
-                That was pretty cool. Except all the drunk people. Actually, they also made it better. Weird stuff. Steak 'N' Shake is overrated. Golden 
-                Corral too. He's pretty good at Rocket League, but unfortunately his friends keep him down. Also, he dabbles a tad in the guitar.</p>
+      <div class="bio">
+      </div>
 
-        </div>
-        <div class="centtext pic">
-            <img title="Just an absolute lad" src="Images/me.png" alt="Ethan drinking coffee in Toronto">
-            <p><b>Contact Info:</b><br>Email: <a id="HE" href="mailto: ethancpost@gmail.com" target="_top">ethancpost@gmail.com</a></p>
-        </div>
+      <div class="centtext pic">
+        <img title="Me" src="images/me.png" alt="Just a picture of me.">
+        <p><b>Contact Info:</b><br>Email: <a id="HE" href="mailto: ethancpost@gmail.com" target="_top">ethancpost@gmail.com</a></p>
+      </div>
     </div>
     <hr style="clear:right;">
     <p class="centtext"><q>I am the <i>Squid Whisperer</i>, and these squids are like <b><i>woah</i></b>.</q> <i>- Ethan Post (2013)</i></p>
-</body>
-</div>
+  </body>
 </html>
