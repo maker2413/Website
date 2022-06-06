@@ -3,6 +3,7 @@ name: Publish Website to Dev bucket
 on:
   push:
     branches:
+      - '**'
       - '!master'
 
 env:
