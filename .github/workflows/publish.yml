@@ -1,4 +1,4 @@
-name: Publish Website to Web
+name: Publish Website to Bucket
 
 on:
   push:
