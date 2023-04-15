@@ -71,17 +71,19 @@ li a:hover {
 }
 
 .portrait img{
-  border-radius: 50%;
-  height: 50%;
-  width: 50%;
+  max-width: 35%;
+  overflow: hidden;
+  clip-path: circle(49% at 50% 51%);
+  margin-right: 2%;
+  float: left;
 }
 
 #HE:link, #HE:visited{
-    color: rgb(0,200,255);
+  color: rgb(0,200,255);
 }
 
 #HE:hover{
-    color: rgb(100,245,255);
+  color: rgb(100,245,255);
 }
 
 /* /\* MEDIA QUERIES *\/ */
