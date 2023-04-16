@@ -82,11 +82,11 @@ li a:hover {
   float: left;
 }
 
-#HE:link, #HE:visited{
+#email:link, #email:visited{
   color: rgb(0,200,255);
 }
 
-#HE:hover{
+#email:hover{
   color: rgb(100,245,255);
 }
 
