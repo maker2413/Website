@@ -14,7 +14,7 @@ body{
 }
 
 #title {
-  font-size: 48px;
+  font-size: 54px;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@ body{
   background: #FFFFFF;
   font-family: 'Open Sans Condensed', sans-serif;
   background-color: #FFFFFF;
-  font-size: 18px;
+  font-size: 26px;
   padding-top: 1%;
   padding-bottom: 1%;
   border-bottom: 1px solid #e7e7e7;
@@ -70,6 +70,10 @@ li a:hover {
   padding-right: 3%;
 }
 
+.content p {
+  font-size: 24px;
+}
+
 .portrait img{
   max-width: 35%;
   overflow: hidden;
@@ -86,12 +90,10 @@ li a:hover {
   color: rgb(100,245,255);
 }
 
-/* /\* MEDIA QUERIES *\/ */
+.contact {
+  font-size: 18px;
+}
 
-/* @media screen and (min-width: 1050px){ */
-
-/*     p.synopsis{ */
-/*         font-size:20px; */
-/*     }     */
-
-/* } */
+.centtext {
+  font-size: 18px;
+}
