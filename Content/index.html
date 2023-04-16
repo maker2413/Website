@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
+  <head>
     <title>Ethan Post's Website</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel='shortcut icon' type='image/png' href='Images/me_pixelart.svg'/>
+    <link rel='shortcut icon' type='image/png' href='images/me_pixelart.svg'/>
     <meta charset="UTF-8">
-</head>
+  </head>
 
-<!-- this is a comment -->
-<div ng-app="">
-
-<body>
-    <h1>Ethan Post</h1>    
-<div class="centtext" ng-include="'/widgets/headerbar.html'"></div>
-    <p class="centtext subtitle">DevOps Engineer</p>
-    <div class="row">
-        <div class="bio">
-            <p class="centtext synopsis">
-                Ethan Post is a dedicated worker looking to challenge himself in the future. 
-                His hobbies include Cloud Development, biking, cooking, keto, traveling, blah blah and more.
-                He's a very capable individual and I'm really just looking for filler text right now. This one time Ethan and I went to a Ghost concert.
-                That was pretty cool. Except all the drunk people. Actually, they also made it better. Weird stuff. Steak 'N' Shake is overrated. Golden 
-                Corral too. He's pretty good at Rocket League, but unfortunately his friends keep him down. Also, he dabbles a tad in the guitar.</p>
-
-        </div>
-        <div class="centtext pic">
-            <img title="Just an absolute lad" src="Images/me.png" alt="Ethan drinking coffee in Toronto">
-            <p><b>Contact Info:</b><br>Email: <a id="HE" href="mailto: ethancpost@gmail.com" target="_top">ethancpost@gmail.com</a></p>
-        </div>
+  <body>
+    <div class="wrapper">
+    <h1 id="title">Ethan Post</h1>
+    <div id="navigation">
+      <ul>
+        <li><a href="https://www.github.com/maker2413">GitHub</a></li>
+        <li><a href="https://notes.ethancpost.com">Notes</a></li>
+        <li><a href="https://blog.ethancpost.com">Blog</a></li>
+        <li><a href="Resume.pdf">Resume</a></li>
+        <li><a href="contact/index.html">Contact</a></li>
+      </ul>
     </div>
-    <hr style="clear:right;">
-    <p class="centtext"><q>I am the <i>Squid Whisperer</i>, and these squids are like <b><i>woah</i></b>.</q> <i>- Ethan Post (2013)</i></p>
-</body>
-</div>
+      <div class="content">
+        <div class="portrait">
+          <img title="Me" src="images/me.png" alt="Just a picture of me.">
+        </div>
+        <p>
+          Hi, my name is Ethan Post and I love to tinker with computers and
+          various technologies. I currently have over 5 years of experience in
+          DevOps and previous I worked 2 years as a Software Engineer. Lately
+          I have been bouncing back and forth between studying and building
+          nueral networks, and studying for my CKA.
+        </p>
+        <p>
+          My true passions in life are learning new technologies and working on
+          my personally projects that I hope someday will help others in
+          someway. My favorite personal project that I have put together to date
+          is my Notes project which can be found linked at the top of this page.
+          In short I made all of my notes public on github and set up automation
+          with github actions to publish these notes in a web format in case
+          anyone can gain anything from the lessons I have learned in my life.
+        </p>
+        <p>
+          Another project that I am quite fond of is
+          <a href="https://www.github.com/maker2413/yacm">
+            yacm (yet another configuration manager)
+          </a>. In short this project allows a user to define profiles for each
+          of the systems they want to codify using a simplistic yaml syntax.
+          Yacm allows you to define packages you want to install in a number of
+          package managers, define services you want to enable with support for
+          systemd and runit, and define user created exectuables you want to run
+          between each of these steps. I use yacm to codify all of my personal
+          machines and virtual machines.
+        </p>
+        <p>
+          Another key thing about me and many of the projects I have made is
+          that I'm a huge emacs fan. In my perfect world emacs would be my full
+          blown operating system, but due to the fact that it is single threaded
+          and doesn't have a browser that can compete with most modern web
+          browsers for now it will have to continue to only be 80% of my
+          computer usage. It won't take long if you are poking around my github
+          or my notes to notice that most of documentation and my notes are
+          written in emacs org-mode, which is single handly the thing that made
+          me start using emacs as I think it is my most powerful form of markup
+          language I have ever seen.
+        </p>
+        <p>
+          I'm also not just a huge fan of linux and the open source world, but
+          I have made a concerted effort to slowly cut intrusive technologies
+          out of my life. I haven't booted into Windows in almost 2 years and I
+          have deleted almost all social media out of life including LinkedIn,
+          to the dismay of many of my employers and colleagues. Even though
+          none of these big data collecting companies are going to notice the
+          loss of one user I think it would unjust for me to use technologies
+          that I do not support the practices of.
+        </p>
+        <p>
+          Someday I hope to find a way to make a living by helping advance the
+          world in a better way. Whether this be through open source
+          technologies or a way to develop technologies that can help better
+          peoples lives that is my dream. For now though I just try to make an
+          impact where I can outside of working for tech companies that never
+          let their projects see the light of day outside of their ecosystem.
+        </p>
+        <p>
+          Overall if any of my work interests you or you would like to contact
+          me about anything else feel free to reach out. Here is my email:
+        </p>
+      </div>
+      <div class="contact">
+        <p>
+          <b>Contact Info:</b>
+          <br>Email: <a id="HE" href="mailto: ethancpost@gmail.com" target="_top">
+            ethancpost@gmail.com
+          </a>
+        </p>
+        <hr style="clear:right;">
+      </div>
+    <p class="centtext">
+      <q>I am the <i>Squid Whisperer</i>, and these squids are like <b><i>woah</i></b>.</q> <i>- Ethan Post (2013)</i>
+    </p>
+    </div>
+  </body>
 </html>
