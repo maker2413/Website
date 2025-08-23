@@ -1,4 +1,13 @@
 #terminal { width:100%; max-width: 960px; background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; }
+
+@media (min-width: 1200px) {
+  #terminal { max-width: 1200px; }
+  #terminal-output { max-height: 70vh; }
+}
+@media (min-width: 1600px) {
+  #terminal { max-width: 1300px; }
+  #terminal-output { max-height: 75vh; }
+}
 #terminal-output { max-height: 60vh; overflow-y:auto; padding-bottom: var(--space-3); }
 #terminal-output .line { white-space: pre-wrap; word-break: break-word; }
 #terminal-output .prompt-frag { color: var(--term-blue); }

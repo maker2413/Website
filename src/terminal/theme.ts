@@ -19,6 +19,20 @@ export function initTheme() {
   if (saved) setTheme(saved); else setTheme('auto');
 }
 
+export function getThemePreference(): Mode {
+  const saved = localStorage.getItem(THEME_KEY) as Mode | null;
+  return saved || 'auto';
+}
+
+export function getEffectiveTheme(): { preference: Mode; effective: 'light'|'dark'; } {
+  const pref = getThemePreference();
+  if (pref === 'auto') {
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    return { preference: pref, effective: mql.matches ? 'dark' : 'light' };
+  }
+  return { preference: pref, effective: pref };
+}
+
 export const themeCommand: Command = {
   name: 'theme',
   description: 'Set theme (light|dark|auto)',

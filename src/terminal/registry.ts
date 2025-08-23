@@ -1,5 +1,5 @@
 import type { Command } from './types';
-import { themeCommand } from './theme';
+import { themeCommand, getEffectiveTheme } from './theme';
 
 const about: Command = {
   name: 'about',
@@ -84,15 +84,21 @@ const sudo: Command = {
 const neofetch: Command = {
   name: 'neofetch',
   description: 'Show system summary',
-  run: () => ({ lines: [
-    { text: 'ethan@portfolio' },
-    { text: '--------------' },
-    { text: 'Role: DevOps / Software Engineer' },
-    { text: 'Shell: fish (emulated)' },
-    { text: 'Editor: emacs' },
-    { text: 'Theme: Adwaita (auto)' },
-    { text: 'Favorite: Open source tinkering' }
-  ] })
+  run: () => {
+    const { preference, effective } = getEffectiveTheme();
+    const themeLine = preference === 'auto'
+      ? `Theme: Adwaita (auto → ${effective})`
+      : `Theme: Adwaita (${preference})`;
+    return { lines: [
+      { text: 'ethan@portfolio' },
+      { text: '--------------' },
+      { text: 'Role: DevOps / Software Engineer' },
+      { text: 'Shell: fish (emulated)' },
+      { text: 'Editor: emacs' },
+      { text: themeLine },
+      { text: 'Favorite: Open source tinkering' }
+    ] };
+  }
 };
 
 const make: Command = {
