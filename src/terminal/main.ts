@@ -3,6 +3,7 @@ import { commands } from './registry';
 import { initTheme } from './theme';
 
 const termEl = document.getElementById('terminal') as HTMLElement;
+const formEl = document.getElementById('terminal-input-line') as HTMLFormElement;
 const outputEl = document.getElementById('terminal-output') as HTMLElement;
 const inputEl = document.getElementById('terminal-input') as HTMLInputElement;
 const promptSpan = document.getElementById('prompt') as HTMLSpanElement;
@@ -21,6 +22,11 @@ const terminal = new Terminal({
 terminal.register(commands);
 terminal.println("Welcome. Type 'help' to begin.");
 terminal.renderPrompt();
+
+// Prevent form submission causing page reload
+if (formEl) {
+  formEl.addEventListener('submit', (e) => { e.preventDefault(); });
+}
 
 // Focus handling
 termEl.addEventListener('click', () => inputEl.focus());
