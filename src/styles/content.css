@@ -1,0 +1,6 @@
+section { margin-bottom: var(--space-6); }
+section h2 { margin-top:0; font-size:1.75rem; }
+
+@media (min-width: 900px) {
+  #hero { padding-top: var(--space-6); }
+}

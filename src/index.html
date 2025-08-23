@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ethan Post | Portfolio</title>
+  <meta name="description" content="Ethan Post - DevOps & Software Engineer Portfolio" />
+  <link rel="icon" href="images/me.svg" type="image/svg+xml" />
+  <link rel="preload" href="fonts/jetbrains-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/terminal.css" />
+  <link rel="stylesheet" href="styles/content.css" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header id="hero">
+    <div id="terminal" role="application" aria-label="Interactive terminal">
+      <div id="terminal-output" aria-live="polite"></div>
+      <form id="terminal-input-line" autocomplete="off">
+        <span class="prompt" id="prompt"></span>
+        <input id="terminal-input" type="text" aria-label="Terminal input" autofocus spellcheck="false" />
+      </form>
+      <div class="hint">Type 'help' or scroll ↓</div>
+    </div>
+  </header>
+  <main id="content">
+    <section id="about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    </section>
+    <section id="links">
+      <h2>Links</h2>
+      <ul class="link-list">
+        <li><a href="https://www.github.com/maker2413" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://notes.ethancpost.com" target="_blank" rel="noopener">Notes</a></li>
+        <li><a href="https://blog.ethancpost.com" target="_blank" rel="noopener">Blog</a></li>
+        <li><a href="Content/Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        <li><a href="https://emacs.ethancpost.com" target="_blank" rel="noopener">Emacs</a></li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ethancpost@gmail.com">ethancpost@gmail.com</a></p>
+    </section>
+    <section id="quote">
+      <blockquote>
+        <p>"I am the <em>Squid Whisperer</em>, and these squids are like <strong><em>woah</em></strong>."</p>
+        <footer>- Ethan Post (2013)</footer>
+      </blockquote>
+    </section>
+  </main>
+  <noscript><p>JavaScript disabled. Terminal requires JS.</p></noscript>
+  <script type="module" src="assets/main.js"></script>
+</body>
+</html>
