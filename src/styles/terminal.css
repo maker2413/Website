@@ -1,8 +1,8 @@
-#terminal { width:100%; max-width:none; background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; margin-inline:auto; min-height:60vh; }
+#terminal { width:100%; max-width:none; background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4) clamp(1rem,4vw,4rem); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; margin-inline:auto; min-height:60vh; }
 
 
 /* Full-width scaling; only height & typography adjust */
-#terminal-output { max-height: 70vh; }
+#terminal-output { max-height: 58vh; }
 @media (min-width: 1000px) { #terminal-output { max-height: 78vh; } }
 @media (min-width: 1400px) { #terminal-output { max-height: 85vh; } }
 @media (min-width: 1800px) { #terminal-output { max-height: 88vh; } }
