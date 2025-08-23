@@ -72,7 +72,6 @@ body {
 }
 
 h1,h2,h3 { line-height: 1.2; }
-body > h1 { width:min(1600px,92vw); margin: var(--space-5) auto var(--space-3); padding: 0 clamp(1.5rem,4vw,5rem) 0; font-size: clamp(2rem,5vw,3rem); font-weight:700; letter-spacing:-0.02em; }
 p { line-height: 1.55; }
 
 .skip { position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
