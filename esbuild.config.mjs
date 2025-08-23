@@ -14,6 +14,8 @@ async function copyStatic() {
   mkdirSync(outdir, { recursive: true });
   // Copy resume, images, original content
   cpSync('Content', join(outdir, 'Content'), { recursive: true });
+  // Copy styles (static CSS)
+  cpSync('src/styles', join(outdir, 'styles'), { recursive: true });
   // Root favicon / logo reference
   mkdirSync(join(outdir, 'images'), { recursive: true });
   cpSync('Content/images/me.svg', join(outdir, 'images/me.svg'));
