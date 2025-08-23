@@ -1,25 +1,28 @@
-#terminal { width:100%; max-width: 960px; background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; }
-
-/* Wide scaling for larger displays */
-@media (min-width: 1000px) {
-  #terminal { max-width: clamp(1100px, 85vw, 1400px); }
-  #terminal-output { max-height: 70vh; }
-}
-@media (min-width: 1400px) {
-  #terminal { max-width: clamp(1300px, 80vw, 1600px); }
-  #terminal-output { max-height: 75vh; }
-}
-@media (min-width: 1700px) {
-  #terminal { max-width: clamp(1400px, 78vw, 1700px); }
-  #terminal-output { max-height: 80vh; }
-}
-@media (min-width: 1900px) {
-  #terminal { max-width: clamp(1500px, 75vw, 1800px); }
-  #terminal-output { max-height: 82vh; }
-}
+#terminal { width:100%; max-width:none; background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; margin-inline:auto; min-height:60vh; }
 
 
-#terminal-output { max-height: 65vh; overflow-y:auto; padding-bottom: var(--space-3); }
+/* Full-width scaling; only height & typography adjust */
+#terminal-output { max-height: 70vh; }
+@media (min-width: 1000px) { #terminal-output { max-height: 78vh; } }
+@media (min-width: 1400px) { #terminal-output { max-height: 85vh; } }
+@media (min-width: 1800px) { #terminal-output { max-height: 88vh; } }
+@media (min-width: 2200px) { #terminal-output { max-height: 90vh; } }
+
+/* Font scaling + readable measure on ultra-wide */
+@media (min-width: 1600px) { #terminal { font-size:15px; } }
+@media (min-width: 2000px) { #terminal { font-size:16px; } }
+
+/* Optional max text measure inside output on huge screens */
+@media (min-width: 1800px) {
+  #terminal-output { --max-measure: 190ch; }
+  #terminal-output .line { max-width: var(--max-measure); }
+}
+@media (min-width: 2200px) {
+  #terminal-output { --max-measure: 210ch; }
+}
+
+
+#terminal-output { overflow-y:auto; padding-bottom: var(--space-3); }
 #terminal-output .line { white-space: pre-wrap; word-break: break-word; }
 #terminal-output .prompt-frag { color: var(--term-blue); }
 #terminal-input-line { display:flex; align-items:center; gap: var(--space-2); }
