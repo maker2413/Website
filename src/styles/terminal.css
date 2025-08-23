@@ -1,8 +1,8 @@
-#terminal { width:100%; max-width: 2400px; background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4) clamp(2rem,6vw,6rem); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; margin-inline:auto; min-height:40vh; }
+#terminal { width: min(1600px,92vw); background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4) clamp(1.5rem,4vw,5rem); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; margin-inline:auto; min-height:40vh; }
 
 
 /* Full-width scaling; only height & typography adjust */
-#terminal-output { max-height: 52vh; }
+#terminal-output { max-height: 55vh; }
 @media (min-width: 1000px) { #terminal-output { max-height: 75vh; } }
 @media (min-width: 1400px) { #terminal-output { max-height: 82vh; } }
 @media (min-width: 1800px) { #terminal-output { max-height: 86vh; } }
@@ -29,7 +29,7 @@
 #terminal-input-line .prompt { color: var(--term-blue); }
 #terminal-input { flex:1; background: transparent; border:none; outline:none; color: var(--color-fg); font: inherit; }
 #terminal-input::placeholder { color: var(--color-fg-subtle); }
-.hint { position:absolute; bottom: 6px; right: 12px; font-size: 12px; opacity:0.6; }
+.hint { position:absolute; bottom: 6px; right: 12px; font-size: 12px; opacity:0.65; pointer-events:none; z-index:2; }
 
 /* Scrollbar subtle */
 #terminal-output::-webkit-scrollbar { width:8px; }
