@@ -18,9 +18,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: build
+        run: |
+          make build
+
       - name: Upload to S3
         run: |
-          aws s3 sync --size-only Content s3://$BUCKET_NAME/
+          aws s3 sync --size-only dist s3://$BUCKET_NAME/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
