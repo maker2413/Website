@@ -1,5 +1,8 @@
 .PHONY: dev stop build clean serve
 
+install:
+	npm install
+
 build:
 	npm run build
 
