@@ -4,7 +4,19 @@ import { themeCommand, getEffectiveTheme } from './theme';
 const about: Command = {
   name: 'about',
   description: 'Short professional summary',
-  run: () => ({ lines: [ { text: 'DevOps & Software Engineer focusing on automation, reliability, and clean tooling.' } ] })
+  run: () => {
+    const aboutEl = document.querySelector('#about');
+    if (!aboutEl) {
+      return { lines: [{ text: 'About section not found.' }] };
+    }
+    const paras = Array.from(aboutEl.querySelectorAll('p'));
+    if (!paras.length) {
+      return { lines: [{ text: 'No About text available.' }] };
+    }
+    return {
+      lines: paras.map(p => ({ text: (p.textContent || '').trim() }))
+    };
+  }
 };
 
 const help: Command = {
@@ -34,6 +46,17 @@ const links: Command = {
     { text: 'Blog  : https://blog.ethancpost.com' },
     { text: 'Resume: Content/Resume.pdf' },
     { text: 'Emacs : https://emacs.ethancpost.com' }
+  ]})
+};
+
+const projects: Command = {
+  name: 'projects',
+  description: 'Highlight a few favorite projects',
+  run: () => ({ lines: [
+    { text: 'notes     Public notes system published from a Git repo so others can learn from my study process.' },
+    { text: 'yacm      Yet another configuration manager to codify machines with YAML, manage packages, services, and custom steps.' },
+    { text: 'dotfiles  Linux-first environment, Emacs-centric workflow, and automation around system bootstrap.' },
+    { text: 'More      See github: https://www.github.com/maker2413 for additional tinkering projects.' }
   ]})
 };
 
@@ -69,8 +92,16 @@ const echo: Command = {
 
 const story: Command = {
   name: 'story',
-  description: 'Legacy long-form text placeholder',
-  run: () => ({ lines: [ { text: 'Original narrative preserved; will integrate via pager later.' } ] })
+  description: 'Long-form personal story',
+  run: () => ({ lines: [
+    { text: 'I love tinkering with computers and various technologies.' },
+    { text: 'Over the years I\'ve worked as both a software engineer and a DevOps engineer, and I keep coming back to automation and thoughtful tooling.' },
+    { text: 'My favorite personal project so far is my public notes setup, where all of my notes live in a Git repository and are automatically published in a web format so others can learn from them.' },
+    { text: 'Another project I\'m proud of is yacm (yet another configuration manager), which lets me codify my machines with simple YAML, manage packages, services, and custom scripts, and keep my systems reproducible.' },
+    { text: 'I\'m a huge Emacs fan and write most of my documentation and notes in org-mode. In a perfect world Emacs would be my full operating system, but for now it\'s just most of my computing environment.' },
+    { text: 'I\'m also intentional about avoiding intrusive technologies. I daily drive Linux, rarely boot into Windows, and have removed almost all social media from my life in favor of tools and platforms I can trust.' },
+    { text: 'Long term, I want to make a living helping advance open source and building technologies that actually improve people\'s lives, even if that means working outside the typical big-tech ecosystem.' }
+  ] })
 };
 
 import { githubCommand as github } from './github';
@@ -109,4 +140,4 @@ const make: Command = {
 
 const theme = themeCommand;
 
-export const commands: Command[] = [help, clear, about, story, links, resume, contact, github, whoami, dateCmd, uname, echo, theme, neofetch, sudo, make];
+export const commands: Command[] = [help, clear, about, story, links, projects, resume, contact, github, whoami, dateCmd, uname, echo, theme, neofetch, sudo, make];

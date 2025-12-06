@@ -1,4 +1,4 @@
-.PHONY: dev stop build clean serve
+.PHONY: install dev stop build clean run
 
 install:
 	npm install
@@ -9,7 +9,7 @@ build:
 clean:
 	npm run clean
 
-serve:
+run:
 	npm run dev
 
 # Legacy docker dev (kept if needed)
