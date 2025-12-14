@@ -40,13 +40,14 @@ const contact: Command = {
 const links: Command = {
   name: 'links',
   description: 'List external links',
-  run: () => ({ lines: [
-    { text: 'GitHub: https://www.github.com/maker2413' },
-    { text: 'Notes : https://notes.ethancpost.com' },
-    { text: 'Blog  : https://blog.ethancpost.com' },
-    { text: 'Resume: Content/Resume.pdf' },
-    { text: 'Emacs : https://emacs.ethancpost.com' }
-  ]})
+  run: (_args, term:any) => {
+    term.printlnHTML('Resume  : <a href="Content/Resume.pdf" target="_blank" rel="noopener">Resume.pdf</a>');
+    term.printlnHTML('GitHub  : <a href="https://www.github.com/maker2413" target="_blank" rel="noopener">github.com/maker2413</a>');
+    term.printlnHTML('LinkedIn: <a href="https://www.linkedin.com/in/maker2413/" target="_blank" rel="noopener">linkedin.com/in/maker2413</a>');
+    term.printlnHTML('Notes   : <a href="https://notes.ethancpost.com" target="_blank" rel="noopener">notes.ethancpost.com</a>');
+    term.printlnHTML('Blog    : <a href="https://blog.ethancpost.com" target="_blank" rel="noopener">blog.ethancpost.com</a>');
+    return { lines: [] };
+  }
 };
 
 const projects: Command = {

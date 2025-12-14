@@ -66,6 +66,15 @@ export class Terminal {
     this.output.scrollTop = this.output.scrollHeight;
   }
 
+  public printlnHTML(html: string, className?: string) {
+    const div = document.createElement('div');
+    div.className = 'line' + (className ? ` ${className}` : '');
+    div.innerHTML = html;
+    this.output.appendChild(div);
+    this.trim();
+    this.output.scrollTop = this.output.scrollHeight;
+  }
+
   private printPromptLine(cmd: string) {
     const div = document.createElement('div');
     div.className = 'line';
