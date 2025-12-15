@@ -116,20 +116,51 @@ const sudo: Command = {
 const neofetch: Command = {
   name: 'neofetch',
   description: 'Show system summary',
-  run: () => {
-    const { preference, effective } = getEffectiveTheme();
-    const themeLine = preference === 'auto'
-      ? `Theme: Adwaita (auto → ${effective})`
-      : `Theme: Adwaita (${preference})`;
-    return { lines: [
-      { text: 'ethan@portfolio' },
-      { text: '--------------' },
-      { text: 'Role: DevOps / Software Engineer' },
-      { text: 'Shell: fish (emulated)' },
-      { text: 'Editor: emacs' },
-      { text: themeLine },
-      { text: 'Favorite: Open source tinkering' }
-    ] };
+  run: async (_args, term: any) => {
+    try {
+      const response = await fetch('/images/ascii.txt');
+      const asciiArt = await response.text();
+      const asciiLines = asciiArt.split('\n').filter(line => line.trim());
+
+      const { preference, effective } = getEffectiveTheme();
+      const themeLine = preference === 'auto'
+        ? `Theme: Adwaita (auto → ${effective})`
+        : `Theme: Adwaita (${preference})`;
+
+      const infoLines = [
+        'ethan@portfolio',
+        '--------------',
+        'Role: DevOps / Software Engineer',
+        'Shell: fish (emulated)',
+        'Editor: emacs',
+        themeLine,
+        'Favorite: Open source tinkering'
+      ];
+
+      const maxLines = Math.max(asciiLines.length, infoLines.length);
+      const asciiWidth = Math.max(...asciiLines.map(line => line.length));
+
+      for (let i = 0; i < maxLines; i++) {
+        const asciiLine = asciiLines[i] || '';
+        const infoLine = infoLines[i] || '';
+        const paddedAscii = asciiLine.padEnd(asciiWidth + 2);
+        const combinedLine = paddedAscii + infoLine;
+        term.println(combinedLine);
+      }
+
+      return { lines: [] };
+    } catch (error) {
+      return { lines: [
+        { text: 'ethan@portfolio' },
+        { text: '--------------' },
+        { text: 'Role: DevOps / Software Engineer' },
+        { text: 'Shell: fish (emulated)' },
+        { text: 'Editor: emacs' },
+        { text: 'Theme: Adwaita' },
+        { text: 'Favorite: Open source tinkering' },
+        { text: '(ASCII art failed to load)' }
+      ] };
+    }
   }
 };
 
@@ -141,4 +172,10 @@ const make: Command = {
 
 const theme = themeCommand;
 
-export const commands: Command[] = [help, clear, about, story, links, projects, resume, contact, github, whoami, dateCmd, uname, echo, theme, neofetch, sudo, make];
+const fastfetch: Command = {
+  name: 'fastfetch',
+  description: 'Show system summary (alias for neofetch)',
+  run: neofetch.run
+};
+
+export const commands: Command[] = [help, clear, about, story, links, projects, resume, contact, github, whoami, dateCmd, uname, echo, theme, neofetch, fastfetch, sudo, make];

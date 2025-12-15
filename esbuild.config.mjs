@@ -19,6 +19,7 @@ async function copyStatic() {
   // Root favicon / logo reference
   mkdirSync(join(outdir, 'images'), { recursive: true });
   cpSync('Content/images/me.svg', join(outdir, 'images/me.svg'));
+  cpSync('src/terminal/ascii.txt', join(outdir, 'images/ascii.txt'));
 }
 
 async function buildHTML() {
