@@ -94,7 +94,7 @@ export class Terminal {
   }
 
   private autocomplete() {
-    const value = this.input.value.trim();
+    const value = this.input.value.trim().toLowerCase();
     const matches = [...this.commands.keys()].filter(c => c.startsWith(value));
     if (matches.length === 1) {
       this.input.value = matches[0] + ' ';
@@ -109,7 +109,7 @@ export class Terminal {
     this.history.push(raw);
     this.historyIndex = this.history.length;
     const [cmdName, ...args] = raw.split(/\s+/);
-    const cmd = this.commands.get(cmdName);
+    const cmd = this.commands.get(cmdName.toLowerCase());
     if (!cmd) {
       this.println(`Command not found: ${cmdName}`, 'error');
       return;
