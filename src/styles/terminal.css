@@ -1,0 +1,50 @@
+#terminal { width: min(1600px,92vw); background: var(--color-bg-alt); border:1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4) clamp(1.5rem,4vw,5rem); font-family: var(--font-mono); font-size: 14px; line-height:1.4; box-shadow: var(--shadow-md); position:relative; margin-inline:auto; min-height:40vh; }
+
+
+/* Full-width scaling; only height & typography adjust */
+#terminal-output { max-height: 50vh; }
+@media (min-width: 1000px) { #terminal-output { max-height: 70vh; } }
+@media (min-width: 1400px) { #terminal-output { max-height: 78vh; } }
+@media (min-width: 1800px) { #terminal-output { max-height: 82vh; } }
+@media (min-width: 2200px) { #terminal-output { max-height: 84vh; } }
+
+/* Font scaling + readable measure on ultra-wide */
+@media (min-width: 1600px) { #terminal { font-size:15px; } }
+@media (min-width: 2000px) { #terminal { font-size:16px; } }
+
+/* Optional max text measure inside output on huge screens */
+@media (min-width: 1800px) {
+  #terminal-output { --max-measure: 190ch; }
+  #terminal-output .line { max-width: var(--max-measure); }
+}
+@media (min-width: 2200px) {
+  #terminal-output { --max-measure: 210ch; }
+}
+
+
+#terminal-output { overflow-y:auto; padding-bottom: var(--space-3); }
+#terminal-output .line { white-space: pre-wrap; word-break: break-word; }
+#terminal-output .prompt-frag { color: var(--term-blue); }
+#terminal-input-line { display:flex; align-items:center; gap: var(--space-2); }
+#terminal-input-line .prompt { color: var(--term-blue); }
+#terminal-input { flex:1; background: transparent; border:none; outline:none; color: var(--color-fg); font: inherit; }
+#terminal-input::placeholder { color: var(--color-fg-subtle); }
+.hint { position:absolute; bottom: 6px; right: 12px; font-size: 12px; opacity:0.65; pointer-events:none; z-index:2; }
+
+/* Scrollbar subtle */
+#terminal-output::-webkit-scrollbar { width:8px; }
+#terminal-output::-webkit-scrollbar-track { background: transparent; }
+#terminal-output::-webkit-scrollbar-thumb { background: var(--color-border); border-radius:4px; }
+#terminal-output::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+.blink { animation: blink 1s steps(2, start) infinite; }
+@keyframes blink { to { visibility:hidden; } }
+
+.line.error { color: var(--term-red); }
+.line.success { color: var(--term-green); }
+.line.dim { opacity:0.6; }
+
+.theme-light-only { display: initial; }
+:root[data-theme="dark"] .theme-light-only { display:none; }
+.theme-dark-only { display:none; }
+:root[data-theme="dark"] .theme-dark-only { display: initial; }
